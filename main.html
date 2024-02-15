@@ -9,7 +9,20 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			//Write your code her
+			
+      
+        let maxa = Math.max(...arr);
+		 	
+       let index = arr.indexOf(maxa);
+
+       let arr1 = arr.splice(index, 1);
+
+	  let maxa1=Math.max(...arr1);
+			return maxa1;
+
+
+
 			
 		}
 
