@@ -14,22 +14,34 @@
 			let second='';
 			for(let i=0;i<arr.length;i++){
               if(arr[i]>first){
-                second=first;
-				first=arr[i];  
-			  }else if(arr[i]<first && arr[i]>second){
-                second=arr[i];
-			  }
-	   }	
+                   second=first;
+				   first=arr[i];  
+			     }else if(arr[i]<first && arr[i]>second){
+                    second=arr[i];
+			     }
+	         }	
 		return second;	
+		if(arr.length==0){
+         return "-Infinity";
 		}
+		
+		    if(arr[i]==1){
+				let count ++;
+			}
+			if(count==arr.length){
+               return "-Infinity";
+			  
+			}
+			
+}
 
 		function Main() {
-			var n = prompt("Enter the number of elements");
-			var arr = [];
-			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
-			}
-			alert(secondHighest(arr));
+			// var n = prompt("Enter the number of elements");
+			// var arr = [];
+			// for (var i = 0; i < n; i++) {
+			// 	arr[i] = prompt("Enter element " + (i+1));
+			// }
+			// alert(secondHighest(arr));
 		}
 		Main();
 	</script>
