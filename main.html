@@ -10,20 +10,17 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code her
-			
-      
-        let maxa = Math.max(...arr);
-		 	
-       let index = arr.indexOf(maxa);
-
-       let arr1 = arr.splice(index, 1);
-
-	  let maxa1=Math.max(...arr1);
-			return maxa1;
-
-
-
-			
+			let first='';
+			let second='';
+			for(let i=0;i<arr.length;i++){
+              if(arr[i]>first){
+                second=first;
+				first=arr[i];  
+			  }else if(arr[i]<first && arr[i]>second){
+                second=arr[i];
+			  }
+	   }	
+		return second;	
 		}
 
 		function Main() {
